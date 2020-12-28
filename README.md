@@ -4,7 +4,12 @@
 `npm install`
 
 ### Build
-`npm run start`
+`npm start`
+
+### Test
+`npm test`
 
 ### Lint
 `npm run lint`
+
+[![Build Status](https://github.com/parkjmjohn/portfolio/workflows/ci.yml/badge.svg)](https://github.com/parkjmjohn/portfolio/actions)

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src --ext .js,.jsx",
+    "test": "jest",
     "start": "webpack-dev-server"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "eslint": "^7.16.0",
     "eslint-plugin-react": "^7.21.5",
     "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
     "webpack": "^5.11.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.11.0"
