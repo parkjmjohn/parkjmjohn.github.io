@@ -13,17 +13,14 @@ class Header extends React.Component {
                         <a className="nav-item nav-link" href="#about">
               About
                         </a>
-                        <a className="nav-item nav-link" href="#education">
-              Education
-                        </a>
                         <a className="nav-item nav-link" href="#experiences">
               Experiences
                         </a>
                         <a className="nav-item nav-link" href="#projects">
               Projects
                         </a>
-                        <a className="nav-item nav-link" href="#contact">
-              Contact
+                        <a className="nav-item nav-link" href="#hobbies">
+              Hobbies
                         </a>
                     </div>
                 </nav>

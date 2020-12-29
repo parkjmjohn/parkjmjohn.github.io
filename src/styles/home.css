@@ -1,8 +1,8 @@
-.card_inf {
+.card-inf {
   padding-left: 200px;
 }
 
-.prof_img {
+.prof-img {
   display: block;
   border: none;
   border-radius: 70px;
@@ -13,10 +13,6 @@
   margin-left: auto;
 }
 
-.btn {
-  color: darkgrey;
-}
-
-.btn:hover {
+.btn-soc:hover {
   color: grey;
 }

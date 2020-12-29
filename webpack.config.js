@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -27,7 +28,7 @@ module.exports = {
         use: ["url-loader"],
       },
       {
-        test: /\.(heic|png|jpe?g|gif)$/i,
+        test: /\.(pdf|heic|png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',

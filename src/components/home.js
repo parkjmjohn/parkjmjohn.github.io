@@ -8,10 +8,10 @@ import '../styles/home.css';
 class Home extends React.Component {
     render () {
         return (
-            <div className="container">
+            <div className="container" id="home">
                 <div className="row">
                     <div className="col">
-                        <div className="container card_inf">
+                        <div className="container card-inf">
                             <h4 className="display-4">John J. Park</h4>
                             <h5 className="display-5">Software Engineer</h5>
                             <br />
@@ -30,7 +30,7 @@ class Home extends React.Component {
                             <ul className="list-inline">
                                 <li className="list-inline-item">
                                     <a
-                                        className="btn btn-social-icon btn-github"
+                                        className="btn btn-social-icon btn-github btn-soc"
                                         href="http://github.com/parkjmjohn"
                                     >
                                         <span className="fa fa-github" />
@@ -38,14 +38,17 @@ class Home extends React.Component {
                                 </li>
                                 <li className="list-inline-item">
                                     <a
-                                        className="btn btn-social-icon btn-linkedin"
+                                        className="btn btn-social-icon btn-linkedin btn-soc "
                                         href="https://www.linkedin.com/in/john-j-park-836914145/"
                                     >
                                         <span className="fa fa-linkedin" />
                                     </a>
                                 </li>
                                 <li className="list-inline-item">
-                                    <a className="btn btn-social-icon btn-twitter" href="">
+                                    <a
+                                        className="btn btn-social-icon btn-twitter btn-soc"
+                                        href="https://twitter.com/jpsportsgeek"
+                                    >
                                         <span className="fa fa-twitter" />
                                     </a>
                                 </li>
@@ -53,7 +56,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <div className="col">
-                        <img src={prof} className="prof_img" />
+                        <img src={prof} className="prof-img" />
                     </div>
                 </div>
             </div>
