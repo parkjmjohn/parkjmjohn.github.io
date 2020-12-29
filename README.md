@@ -5,7 +5,11 @@
 `npm start`
 
 ### Build
-`npm build`
+`npm run build`
+
+### Deploy
+`npm run build`
+`npm run deploy`
 
 ### Lint
 `npm run lint`
