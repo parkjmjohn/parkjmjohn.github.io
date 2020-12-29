@@ -1,0 +1,22 @@
+.card_inf {
+  padding-left: 200px;
+}
+
+.prof_img {
+  display: block;
+  border: none;
+  border-radius: 70px;
+  padding: 30px 0;
+  max-width: 60%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  color: darkgrey;
+}
+
+.btn:hover {
+  color: grey;
+}
