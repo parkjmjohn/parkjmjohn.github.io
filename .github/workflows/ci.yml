@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [8, 10, 12]
+        node: [12]
         os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
@@ -26,5 +26,3 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run start
-      - name: test
-        run: npm test

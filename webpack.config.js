@@ -22,6 +22,14 @@ module.exports = {
         test: /\.svg$/i,
         use: ["url-loader"],
       },
+      {
+        test: /\.(heic|png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
