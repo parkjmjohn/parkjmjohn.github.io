@@ -1,3 +1,6 @@
+[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/parkjmjohn/portfolio)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/{owner}/{repo})
+
+
 # portfolio
 
 ### Setup
@@ -17,5 +20,3 @@
 
 ### Test
 `npm test`
-
-[![Build Status](https://github.com/parkjmjohn/portfolio/workflows/ci.yml/badge.svg)](https://github.com/parkjmjohn/portfolio/actions)

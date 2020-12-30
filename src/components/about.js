@@ -11,8 +11,8 @@ class About extends React.Component {
                     <div className="col">
                         <h5 className="display-5">About Me</h5>
                         <p>
-              I am an undergraduate at Cornell University expecting to graduate
-              in May 2021 with a B.S. in Computer Science. Checkout my resume!
+							I am an undergraduate at Cornell University expecting to graduate
+							in May 2021 with a B.S. in Computer Science. Checkout my resume!
                         </p>
                         <a
                             href={resume}
@@ -21,7 +21,7 @@ class About extends React.Component {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-              Download CV
+							Download CV
                         </a>
                     </div>
                 </div>
