@@ -1,5 +1,5 @@
 import React from 'react';
-import resume from '../files/resume.pdf';
+import resume from '/content/resume.pdf';
 import '../styles/about.css';
 
 class About extends React.Component {
