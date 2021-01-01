@@ -1,4 +1,5 @@
 ---
+order: 4
 company: 'Iterate Labs'
 position: 'Software Engineer Intern'
 date: 'May - August 2018'

@@ -1,4 +1,5 @@
 ---
+order: 2
 company: 'ID Tech Camps'
 position: 'Course Instructor'
 date: 'June 2019 - August 2019'

@@ -1,4 +1,5 @@
 ---
+order: 1
 company: 'Asymm Developers'
 position: 'Technical Product Manager Intern'
 date: 'May - October 2020'

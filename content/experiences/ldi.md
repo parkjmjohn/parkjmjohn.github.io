@@ -1,4 +1,5 @@
 ---
+order: 3
 company: 'Labor Dynamics Institute'
 position: 'Research Assistant'
 date: 'August 2018 - October 2019'

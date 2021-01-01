@@ -1,4 +1,5 @@
 ---
+order: 5
 company: 'The New York Times'
 position: 'Project Manager Intern'
 date: 'July – August 2017'
