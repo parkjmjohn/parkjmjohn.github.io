@@ -7,7 +7,6 @@ use dioxus::prelude::*;
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 const PROF_JPG: Asset = asset!("/assets/prof.jpg");
 const RESUME: Asset = asset!("/assets/resume.pdf");
-const FAVICON: Asset = asset!("/assets/favicon.png");
 
 fn main() {
     dioxus::launch(App);
@@ -16,7 +15,7 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Link { rel: "icon", r#type: "image/png", href: FAVICON }
+        // The favicon link lives in index.html so it is present before hydration.
         document::Link { rel: "stylesheet", href: MAIN_CSS }
 
         div { class: "shell",
@@ -37,11 +36,12 @@ fn TopBar() -> Element {
     let mut theme = use_signal(|| Option::<&'static str>::None);
 
     let flip = move |_| {
-        let next = match theme() {
-            Some("dark") => "light",
-            Some("light") => "dark",
-            // First click: jump to whichever theme the OS is *not* showing.
-            None => "dark",
+        // Anything that is not already dark flips to dark, including the
+        // pre-hydration `None` state where the OS setting is in charge.
+        let next = if matches!(theme(), Some("dark")) {
+            "light"
+        } else {
+            "dark"
         };
         theme.set(Some(next));
         document::eval(&format!(

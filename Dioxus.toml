@@ -8,6 +8,7 @@ title = "John J. Park — Software Engineer"
 reload_html = true
 watch_path = ["src", "assets", "index.html"]
 
-[web.resource]
-style = []
-script = []
+# Optimise the wasm for size rather than speed. Nothing on this page is
+# compute-bound, so bytes over the wire is the only metric that matters.
+[web.wasm_opt]
+level = "z"

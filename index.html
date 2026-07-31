@@ -4,9 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John J. Park — Software Engineer</title>
+  <!-- Left empty on purpose: dx fills this from [web.app] title in
+       Dioxus.toml. Putting text here as well produces a doubled title. -->
+  <title></title>
   <meta name="description" content="Software engineer. Cornell CS. Building things for the web." />
   <meta name="author" content="John J. Park" />
+  <!-- Served verbatim from public/, so it is present on first paint rather
+       than injected at hydration (which leaves a /favicon.ico 404 behind). -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="canonical" href="https://johnjpark.com/" />
   <meta name="theme-color" content="#fbfaf9" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#12120f" media="(prefers-color-scheme: dark)" />

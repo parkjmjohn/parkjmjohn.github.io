@@ -5,10 +5,13 @@
   --bg-raised: #ffffff;
   --text: #1b1a18;
   --text-muted: #6b6862;
-  --text-faint: #94908a;
+  --text-faint: #757169;
   --line: #e5e1db;
   --line-strong: #d3cec6;
   --accent: #b8542c;
+  /* Text drawn on top of --accent. Kept as its own token because the accent
+     is light enough in dark mode that white on it fails WCAG AA. */
+  --accent-ink: #ffffff;
   --accent-soft: #f5e9e3;
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
@@ -25,10 +28,11 @@
   --bg-raised: #1a1a16;
   --text: #eae7e1;
   --text-muted: #a09b92;
-  --text-faint: #726d65;
+  --text-faint: #837d74;
   --line: #2a2925;
   --line-strong: #3b3a32;
   --accent: #e08355;
+  --accent-ink: #24140a;
   --accent-soft: #2a1d16;
 }
 
@@ -38,10 +42,11 @@
     --bg-raised: #1a1a16;
     --text: #eae7e1;
     --text-muted: #a09b92;
-    --text-faint: #726d65;
+    --text-faint: #837d74;
     --line: #2a2925;
     --line-strong: #3b3a32;
     --accent: #e08355;
+    --accent-ink: #24140a;
     --accent-soft: #2a1d16;
   }
 }
@@ -186,6 +191,10 @@ img {
 
 .hero-photo {
   width: clamp(7rem, 22vw, 10.5rem);
+  /* The width/height attributes on the <img> reserve space against layout
+     shift, but the height one is a presentational hint that outranks
+     aspect-ratio. Without this the element renders at its full 880px. */
+  height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
@@ -232,7 +241,7 @@ img {
 .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .btn-primary:hover {
@@ -324,6 +333,17 @@ img {
   font-size: 0.72rem;
   color: var(--text-faint);
   letter-spacing: 0.03em;
+}
+
+/* The link-out arrow sits in an .entry-meta slot and has no intrinsic size. */
+.entry-meta svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+a.entry:hover .entry-meta svg {
+  color: var(--accent);
 }
 
 .entry-sub {
