@@ -1,0 +1,19 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2021"
+description = "Personal site for John J. Park, built with Dioxus and compiled to WebAssembly."
+license = "MIT"
+publish = false
+
+[dependencies]
+dioxus = { version = "0.7.10", features = ["web"] }
+
+# Keeps the shipped .wasm small: optimize for size, and let LTO strip everything
+# the page never calls. Worth ~a third of the bundle on a site this simple.
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

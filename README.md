@@ -1,22 +1,47 @@
-[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/parkjmjohn/portfolio)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/{owner}/{repo})
+# johnjpark.com
 
+Personal site, written in Rust and compiled to WebAssembly with
+[Dioxus](https://dioxuslabs.com). Deployed to GitHub Pages.
 
-# portfolio
+## Prerequisites
 
-### Setup
-`npm install`
-`npm start`
+```sh
+rustup target add wasm32-unknown-unknown
+cargo install dioxus-cli --version 0.7.10 --locked
+```
 
-### Build
-`npm run build`
+## Develop
 
-### Deploy
-`npm run build`
-`npm run deploy`
+```sh
+dx serve          # http://localhost:8080, hot reloads on save
+```
 
-### Lint
-`npm run lint`
-`npm run format`
+## Build
 
-### Test
-`npm test`
+```sh
+dx bundle --platform web --release
+```
+
+Output lands in `target/dx/portfolio/release/web/public`.
+
+## Checks
+
+```sh
+cargo fmt --check
+cargo clippy --target wasm32-unknown-unknown -- -D warnings
+```
+
+## Editing content
+
+All copy — name, bio, roles, projects, links — lives in
+[`src/content.rs`](src/content.rs). Editing the site normally means editing
+that file only; the components in `src/main.rs` render whatever it holds.
+
+Styling is plain CSS in [`assets/main.css`](assets/main.css), organised with
+custom properties at the top for colour and spacing.
+
+## Deploying
+
+Pushes to `main` trigger [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the site and publishes it to GitHub Pages. The repository's Pages
+source must be set to **GitHub Actions** (Settings → Pages).

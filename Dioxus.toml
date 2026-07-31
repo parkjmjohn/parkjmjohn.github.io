@@ -1,0 +1,13 @@
+[application]
+
+[web.app]
+# Served from the domain root (johnjpark.com via CNAME), so no base_path.
+title = "John J. Park — Software Engineer"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets", "index.html"]
+
+[web.resource]
+style = []
+script = []
